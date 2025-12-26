@@ -88,6 +88,18 @@ npm start
 
 ## Docker (One Command)
 
+Make sure you create a `.env` in the project root on the server (see example below).
+
+Example `.env` (adjust IP/domain):
+```env
+SECRET_KEY=change-me
+DEBUG=False
+ALLOWED_HOSTS=localhost,127.0.0.1,SERVER_IP_OR_DOMAIN
+CORS_ALLOWED_ORIGINS=http://SERVER_IP_OR_DOMAIN:3000
+VITE_API_URL=http://SERVER_IP_OR_DOMAIN:8000/api/v1
+VITE_AUTH_URL=http://SERVER_IP_OR_DOMAIN:8000
+```
+
 1. Build and start:
 ```bash
 docker compose up --build
